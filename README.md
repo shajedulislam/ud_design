@@ -15,7 +15,7 @@ Please check the latest version before installation.
 dependencies:
   flutter:
     sdk: flutter
-  ud_design: ^0.0.2
+  ud_design: ^0.0.3
 ```
 
 ### Add the following import to your Dart code:
@@ -72,11 +72,12 @@ class  Home  extends  StatelessWidget {
 
 ## Contributors
 
-**Muhammad Shajedul Islam**
-www.shajedulislam.dev
+**Muhammad Shajedul Islam** <br>
+www.shajedulislam.dev <br>
 info@shajedulislam.dev
 
+<br>
 
-**Fatima Mostafa**
+**Fatima Mostafa** <br>
 the.fatimamostafa@gmail.com
 
