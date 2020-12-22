@@ -1,6 +1,6 @@
 name: ud_design
-description: A Flutter package to develop responsive flutter applications.
-version: 0.0.1
+description: A Flutter package to develop responsive Flutter applications.
+version: 0.0.2
 homepage: https://github.com/shajedulislam/ud_design
 
 environment:

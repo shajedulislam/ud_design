@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // ===> IMPORTANT : Initializing UdDesign is must!
+    //Initializing UdDesign!
     UdDesign.init(context);
 
     return Scaffold(

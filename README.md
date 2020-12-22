@@ -1,8 +1,8 @@
 # UD DESIGN
 
-**ud_design package helps developing responsive flutter applications.**
+**ud_design package helps developing responsive Flutter applications.**
 
-Note: This package is still under development.
+Note: This package is still under development. Try not to use same value for both Mobile and Tablet devices. Do not use this package for Desktop or Web platform now. We are working on it.
 
 
 ## Usage:
@@ -15,7 +15,7 @@ Please check the latest version before installation.
 dependencies:
   flutter:
     sdk: flutter
-  ud_design: ^0.0.1
+  ud_design: ^0.0.2
 ```
 
 ### Add the following import to your Dart code:
@@ -24,9 +24,10 @@ dependencies:
 import 'package:ud_design/ud_design.dart';
 ```
 
+
 ### Initialization:
 
-You must call **UdDesign.init()** function and pass **context** in a **Widget build** function and it should be inside **MaterialApp**, Not Before **MaterialApp**.
+You must call **UdDesign.init()** and pass **context** in a **Widget build** function and it should be inside **MaterialApp**, Not Before **MaterialApp**.
 
 **Example:**
 
@@ -48,12 +49,13 @@ class  MyApp  extends  StatelessWidget {
 class  Home  extends  StatelessWidget {
   @override
   Widget  build(BuildContext context) {
-  //Initializing UdDesign is must!
+  //Initializing UdDesign!
     UdDesign.init(context);
     return  Scaffold();
   }
 }
 ```
+
 
 ## Responsiveness
 
@@ -65,14 +67,16 @@ class  Home  extends  StatelessWidget {
 
 * For responsive font size, use  **UdDesign.fontSize()** and pass value.
 
-	**Check example page for code examples**
+	**Check [example](https://pub.dev/packages/ud_design/example) page for code examples**
+
 
 ## Contributors
 
-* **Muhammad Shajedul Islam**
+**Muhammad Shajedul Islam**
 www.shajedulislam.dev
 info@shajedulislam.dev
 
-* **Fatima Mostafa**
+
+**Fatima Mostafa**
 the.fatimamostafa@gmail.com
 
