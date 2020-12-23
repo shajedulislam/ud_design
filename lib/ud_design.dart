@@ -1,9 +1,9 @@
 library ud_design;
 
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:ud_design/enums.dart';
 import 'package:ud_design/values.dart';
+import 'screen_util/screen_util.dart';
 
 export 'package:ud_design/values.dart';
 export 'package:ud_design/enums.dart';
