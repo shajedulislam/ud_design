@@ -3,7 +3,7 @@ library ud_design;
 import 'package:flutter/material.dart';
 import 'package:ud_design/enums.dart';
 import 'package:ud_design/values.dart';
-import 'screen_util/screen_util.dart';
+import 'screen_util/screen_utility.dart';
 
 export 'package:ud_design/values.dart';
 export 'package:ud_design/enums.dart';
@@ -74,13 +74,13 @@ class UdDesign {
   static double fontSize(double size) {
     switch (deviceType) {
       case UdDeviceType.mobile:
-        return ScreenUtil().setSp(size);
+        return ScreenUtility().setSp(size);
         break;
       case UdDeviceType.tablet:
-        return ScreenUtil().setSp(size * 1.5);
+        return ScreenUtility().setSp(size * 1.5);
         break;
       default:
-        return ScreenUtil().setSp(size);
+        return ScreenUtility().setSp(size);
         break;
     }
   }
@@ -119,7 +119,7 @@ class UdDesign {
       defaultScreenHeight = ProjectValues.screen_height_tabletAll;
     }
 
-    ScreenUtil.init(
+    ScreenUtility.init(
       context,
       designSize: Size(defaultScreenWidth, defaultScreenHeight),
       allowFontScaling: true,

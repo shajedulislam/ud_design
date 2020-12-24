@@ -1,17 +1,24 @@
-import 'screen_util.dart';
+import 'package:ud_design/screen_util/screen_utility.dart';
 
 extension SizeExtension on num {
-  double get w => ScreenUtil().setWidth(this);
+  ///[ScreenUtility.setWidth]
+  double get w => ScreenUtility().setWidth(this);
 
-  double get h => ScreenUtil().setHeight(this);
+  ///[ScreenUtility.setHeight]
+  double get h => ScreenUtility().setHeight(this);
 
-  double get sp => ScreenUtil().setSp(this);
+  ///[ScreenUtility.setSp]
+  double get sp => ScreenUtility().setSp(this);
 
-  double get ssp => ScreenUtil().setSp(this, allowFontScalingSelf: true);
+  ///[ScreenUtility.setSp]
+  double get ssp => ScreenUtility().setSp(this, allowFontScalingSelf: true);
 
-  double get nsp => ScreenUtil().setSp(this, allowFontScalingSelf: false);
+  ///[ScreenUtility.setSp]
+  double get nsp => ScreenUtility().setSp(this, allowFontScalingSelf: false);
 
-  double get sw => ScreenUtil().screenWidth * this;
+  ///Multiple of screen width
+  double get sw => ScreenUtility().screenWidth * this;
 
-  double get sh => ScreenUtil().screenHeight * this;
+  ///Multiple of screen height
+  double get sh => ScreenUtility().screenHeight * this;
 }

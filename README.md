@@ -15,7 +15,7 @@ Please check the latest version before installation.
 dependencies:
   flutter:
     sdk: flutter
-  ud_design: ^0.0.4
+  ud_design: ^0.0.5
 ```
 
 ### Add the following import to your Dart code:

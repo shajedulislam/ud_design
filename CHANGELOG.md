@@ -1,3 +1,7 @@
+## 0.0.5
+
+* Documentation comments and README.md updated
+
 ## 0.0.4
 
 * font size responsiveness and README.md updated
