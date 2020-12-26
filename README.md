@@ -2,7 +2,7 @@
 
 **ud_design package helps developing responsive Flutter applications.**
 
-Note: This package is still under development. Try not to use same value for both Mobile and Tablet devices. Do not use this package for Desktop or Web platform now. We are working on it.
+Note: This package is still under development. Try not to use same value for both Mobile and Tablet devices. Do not use this package for Desktop or Web platform now, We are working on it. Always check for updated version.
 
 
 ## Usage:
@@ -15,7 +15,7 @@ Please check the latest version before installation.
 dependencies:
   flutter:
     sdk: flutter
-  ud_design: ^0.0.5
+  ud_design: ^0.0.6
 ```
 
 ### Add the following import to your Dart code:

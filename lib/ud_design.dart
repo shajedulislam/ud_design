@@ -3,13 +3,14 @@ library ud_design;
 import 'package:flutter/material.dart';
 import 'package:ud_design/enums.dart';
 import 'package:ud_design/values.dart';
-import 'screen_util/screen_utility.dart';
+import 'font_responsiveness.dart';
 
 export 'package:ud_design/values.dart';
 export 'package:ud_design/enums.dart';
 
 /// UdDesign will help you making responsive application in many ways!
 class UdDesign {
+  static bool _init = false;
   static MediaQueryData _mediaQueryData;
   static double screenWidth;
   static double screenHeight;
@@ -39,16 +40,28 @@ class UdDesign {
 
   ///For responsiveness you can use this function by passing how much screen portion you want to use in horizontal (X) axis in the range of `0% - 100%`.
   static double blocksXaxis(double blocks) {
+    assert(
+      _init,
+      "\nYou must call UdDesign.init() and pass context in a Widget build function and it should be inside MaterialApp, Not Before MaterialApp.\n",
+    );
     return _blockSizeHorizontal * blocks;
   }
 
   ///For responsiveness you can use this function by passing how much screen portion you want to use in vertical (Y) axis in the range of `0% - 100%`.
   static double blocksYaxis(double blocks) {
+    assert(
+      _init,
+      "\nYou must call UdDesign.init() and pass context in a Widget build function and it should be inside MaterialApp, Not Before MaterialApp.\n",
+    );
     return _blockSizeVertical * blocks;
   }
 
   ///Flutter does not have exact solution to use pixel values for responsiveness but we tried to make one and it works nice. You can try out by passing pixel values.
   static double pixels(double blocks) {
+    assert(
+      _init,
+      "\nYou must call UdDesign.init() and pass context in a Widget build function and it should be inside MaterialApp, Not Before MaterialApp.\n",
+    );
     return _blockSizeHorizontal * blocks * _pixelAdditionByDevice();
   }
 
@@ -72,21 +85,27 @@ class UdDesign {
 
   /// To make responsive font size, use this function
   static double fontSize(double size) {
+    assert(
+      _init,
+      "\nYou must call UdDesign.init() and pass context in a Widget build function and it should be inside MaterialApp, Not Before MaterialApp.\n",
+    );
+
     switch (deviceType) {
       case UdDeviceType.mobile:
-        return ScreenUtility().setSp(size);
+        return FontResponsiveness().setSp(size);
         break;
       case UdDeviceType.tablet:
-        return ScreenUtility().setSp(size * 1.5);
+        return FontResponsiveness().setSp(size * 1.5);
         break;
       default:
-        return ScreenUtility().setSp(size);
+        return FontResponsiveness().setSp(size);
         break;
     }
   }
 
   /// You must call this function in a [ Widget build ] function and it should be inside [ MaterialApp ]. Not Before [ MaterialApp ].
   static void init(BuildContext context) {
+    _init = true;
     _mediaQueryData = MediaQuery.of(context);
     screenWidth = _mediaQueryData.size.width;
     screenHeight = _mediaQueryData.size.height;
@@ -119,10 +138,9 @@ class UdDesign {
       defaultScreenHeight = ProjectValues.screen_height_tabletAll;
     }
 
-    ScreenUtility.init(
+    FontResponsiveness.init(
       context,
       designSize: Size(defaultScreenWidth, defaultScreenHeight),
-      allowFontScaling: true,
     );
   }
 }
