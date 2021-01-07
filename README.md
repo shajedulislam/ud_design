@@ -15,7 +15,7 @@ Please check the latest version before installation.
 dependencies:
   flutter:
     sdk: flutter
-  ud_design: ^0.0.6
+  ud_design: ^0.0.7
 ```
 
 ### Add the following import to your Dart code:
@@ -66,6 +66,10 @@ class  Home  extends  StatelessWidget {
 * For responsiveness you can use **UdDesign.blocksYaxis()** by passing how much screen portion you want to use in vertical (Y) axis in the range of **0% - 100%**.
 
 * For responsive font size, use  **UdDesign.fontSize()** and pass value.
+
+* To get device type use **UdDesign.deviceType** or call **UdDesign.getDeviceType()**.
+
+* For device orientation update use **UdDesign.orientation**. Landscape orientation will set **UdDesign.deviceType** value as **tablet**.
 
 	**Check [example](https://pub.dev/packages/ud_design/example) page for code examples**
 

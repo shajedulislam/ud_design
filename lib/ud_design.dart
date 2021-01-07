@@ -17,8 +17,7 @@ class UdDesign {
   static double _blockSizeHorizontal;
   static double _blockSizeVertical;
   static UdDeviceType deviceType;
-  // ignore: unused_field
-  static Orientation _orientation;
+  static Orientation orientation;
 
   ///returns device type based on screen width
   static UdDeviceType getDeviceType() {
@@ -111,11 +110,15 @@ class UdDesign {
     screenHeight = _mediaQueryData.size.height;
     _blockSizeHorizontal = screenWidth / 100;
     _blockSizeVertical = screenHeight / 100;
-    _orientation = _mediaQueryData.orientation;
+    orientation = _mediaQueryData.orientation;
 
     if (screenWidth <= 480) {
       deviceType = UdDeviceType.mobile;
     } else if (screenWidth > 480 && screenWidth <= 850) {
+      deviceType = UdDeviceType.tablet;
+    } else if (screenWidth > 480 &&
+        screenWidth <= 850 &&
+        UdDesign.orientation == Orientation.landscape) {
       deviceType = UdDeviceType.tablet;
     }
     //else if (screenWidth > 600 && screenWidth <= 768) {

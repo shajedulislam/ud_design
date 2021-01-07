@@ -1,3 +1,7 @@
+## 0.0.7
+
+* Added device orientation, updated example and README.md
+
 ## 0.0.6
 
 * Font size responsiveness improved and README.md updated

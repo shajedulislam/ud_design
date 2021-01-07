@@ -21,6 +21,9 @@ class Home extends StatelessWidget {
     //Initializing UdDesign!
     UdDesign.init(context);
 
+    //Getting device type to use it on purpose
+    UdDeviceType devType = UdDesign.getDeviceType();
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -33,19 +36,25 @@ class Home extends StatelessWidget {
         ),
         backgroundColor: Colors.black87,
       ),
-      body: Center(
+      body: SingleChildScrollView(
+        padding: EdgeInsets.all(UdDesign.pixels(16)),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(
               //Setting 315px responsive width
               width: UdDesign.pixels(315),
               child: Text(
-                'ud_design package helps developing responsive mobile applications.',
+                //Text will be shown beased on device orientation
+                UdDesign.orientation == Orientation.portrait
+                    ? 'Device orientation in potrait mode'
+                    : 'Device orientation changed to landscape mode and font size changed because of it',
                 style: TextStyle(
                   color: Colors.black87,
-                  //Setting 16 as a responsive font size
-                  fontSize: UdDesign.fontSize(16),
+                  //Setting responsive font size but will be changed based on device type
+                  fontSize: UdDesign.fontSize(
+                    devType == UdDeviceType.mobile ? 16 : 14,
+                  ),
                 ),
               ),
             ),
