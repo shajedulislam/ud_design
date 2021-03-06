@@ -3,27 +3,31 @@ class ProjectValues {
 
   // Desktop
 
-  // static const screen_width_desktopExtraLarge = 4096.0;
-  // static const screen_width_desktopLarge = 3840.0;
-  // static const screen_width_desktopNormal = 1920.0;
-  // static const screen_width_desktopSmall = 950.0;
+  static const screen_width_desktopExtraLarge = 3440.0;
+  static const screen_height_desktopExtraLarge = 1278.0;
+
+  static const screen_width_desktopLarge = 2460.0;
+  static const screen_height_desktopLarge = 1120.0;
+
+  static const screen_width_desktopMedium = 1680.0;
+  static const screen_height_desktopMedium = 946.0;
+
+  static const screen_width_desktopSmall = 1320.0;
+  static const screen_height_desktopSmall = 1024.0;
 
   // Tablet
 
-  static const screen_width_tabletAll = 768.0;
-  static const screen_height_tabletAll = 1024.0;
+  static const screen_width_tabletExtraLarge = 842.0;
+  static const screen_height_tableExtratLarge = 1180.0;
 
-  // static const screen_width_tabletExtraLarge = 900.0;
-  // static const screen_height_tabletExtraLarge = 1024.0;
+  static const screen_width_tabletLarge = 770.0;
+  static const screen_height_tabletLarge = 1180.0;
 
-  // static const screen_width_tabletLarge = 850.0;
-  // static const screen_height_tabletLarge = 1024.0;
+  static const screen_width_tabletMedium = 628.0;
+  static const screen_height_tabletMedium = 1024.0;
 
-  // static const screen_width_tabletNormal = 768.0;
-  // static const screen_height_tabletNormal = 1024.0;
-
-  // static const screen_width_tabletSmall = 600.0;
-  // static const screen_height_tabletSmall = 912.0;
+  static const screen_width_tabletSmall = 542.0;
+  static const screen_height_tabletSmall = 912.0;
 
   // Mobile
 
