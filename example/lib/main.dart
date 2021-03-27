@@ -65,8 +65,10 @@ class Home extends StatelessWidget {
               width: UdDesign.pt(250),
               //Setting 45px responsive height
               height: UdDesign.pt(45),
-              child: RaisedButton(
-                color: Colors.black87,
+              child: ElevatedButton(
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.black87,
+                ),
                 child: Text(
                   'Button',
                   style: TextStyle(

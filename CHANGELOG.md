@@ -1,3 +1,7 @@
+## 0.0.9
+
+- Migrated to null safety
+
 ## 0.0.8
 
 - Responsive support added for tabs. UdDesign.pixel() method deprecated. Readme updated.

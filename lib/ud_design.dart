@@ -11,13 +11,13 @@ export 'package:ud_design/enums.dart';
 ///UdDesign will help you making responsive application in many ways!
 class UdDesign {
   static bool _init = false;
-  static MediaQueryData _mediaQueryData;
-  static double screenWidth;
-  static double screenHeight;
-  static double _blockSizeHorizontal;
-  static double _blockSizeVertical;
-  static UdDeviceType deviceType;
-  static Orientation orientation;
+  static late MediaQueryData _mediaQueryData;
+  static late double screenWidth;
+  static late double screenHeight;
+  static late double _blockSizeHorizontal;
+  static late double _blockSizeVertical;
+  static UdDeviceType? deviceType;
+  static Orientation? orientation;
 
   ///returns device type based on screen width
   static UdDeviceType getDeviceType() {
@@ -153,8 +153,8 @@ class UdDesign {
 
     //print(deviceType);
 
-    double defaultScreenWidth;
-    double defaultScreenHeight;
+    late double defaultScreenWidth;
+    late double defaultScreenHeight;
 
     if (deviceType == UdDeviceType.mobile) {
       defaultScreenWidth = ProjectValues.screen_width_mobileAll;

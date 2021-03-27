@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class FontResponsiveness {
-  static FontResponsiveness _instance;
+  static FontResponsiveness? _instance;
   static const Size defaultSize = Size(1080, 1920);
 
   /// Size of the phone in UI Design , px
@@ -10,7 +10,7 @@ class FontResponsiveness {
   /// allowFontScaling Specifies whether fonts should scale to respect Text Size accessibility settings. The default is false.
   bool allowFontScaling = false;
 
-  static double _screenWidth;
+  static late double _screenWidth;
 
   FontResponsiveness._();
 
@@ -19,7 +19,7 @@ class FontResponsiveness {
       _instance != null,
       '\nYou must call UdDesign.init() and pass context in a Widget build function and it should be inside MaterialApp, Not Before MaterialApp.',
     );
-    return _instance;
+    return _instance!;
   }
 
   static void init(
@@ -27,7 +27,7 @@ class FontResponsiveness {
     Size designSize = defaultSize,
   }) {
     _instance ??= FontResponsiveness._();
-    _instance..uiSize = designSize;
+    _instance!..uiSize = designSize;
 
     MediaQueryData mediaQuery = MediaQuery.of(context);
 
